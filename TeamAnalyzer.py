@@ -81,7 +81,7 @@ if answer.upper() == "Y" or answer.upper() == "YES":
                   pokemon5 INTEGER,
                   pokemon6 INTEGER)''')
 
-    conn.commit()
+    #conn.commit()
     # Write the pokemon team to the "teams" table
     c.execute(f"INSERT INTO teams(team_name, pokemon1, pokemon2, pokemon3, pokemon4, pokemon5, pokemon6) VALUES ('{teamName}', {get_pokemon_id(sys.argv[1])}, {get_pokemon_id(sys.argv[2])}, {get_pokemon_id(sys.argv[3])}, {get_pokemon_id(sys.argv[4])}, {get_pokemon_id(sys.argv[5])}, {get_pokemon_id(sys.argv[6])})")
     conn.commit()
